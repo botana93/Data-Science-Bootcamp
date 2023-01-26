@@ -1,0 +1,53 @@
+Creating a Database
+1. Create a database of your own choice
+
+  CREATE DATABASE Corelearning;
+
+2. Create a table which must have a primary key and the correct datatypes
+3. Include a minimum of 5 fields
+
+  USE Corelearning;
+
+  CREATE TABLE CustomerDetails (
+    PersonID int (8),
+    LastName varchar(25),
+    FirstName varchar(25),
+    Telephone int (25),
+    Age int (25),
+    PRIMARY KEY (PersonID) 
+  );
+
+4. View and show the table structures
+
+  EXPLAIN CustomerDetails;
+
+5. Enter 10 records into your table and view them
+
+  INSERT INTO CustomerDetails (PersonID, LastName, FirstName, Telephone, Age)
+  VALUES (01, 'Smith', 'Sam', 1234567, 30),
+        (02, 'Swift', 'Taylor', 6543210, 33),
+        (03, 'Knowles', 'Beyonce', 6543210, 41),
+        (04, 'Timberlake', 'Justin', 2345678, 41),
+        (05, 'Lewis', 'Leona', 5432123, 37),
+        (06, 'Carey' , 'Mariah', 5493245, 52),
+        (07, 'Cyrus', 'Miley', 7694562, 30),
+        (08, 'Hudson', 'Jennifer', 6308664, 41),
+        (09, 'Cole', 'Keyshia', 6783492, 41),
+        (10, 'Keen', 'Raye', 8820987, 25);
+
+6. Update a record
+
+  SELECT*
+  FROM CustomerDetails;
+
+  UPDATE CustomerDetails
+  SET Telephone=4859635
+  WHERE LastName='Lewis'
+
+7. Delete a record
+  SELECT *
+  FROM CustomerDetails;
+
+  DELETE FROM CustomerDetails
+  WHERE PersonID=10;
+
